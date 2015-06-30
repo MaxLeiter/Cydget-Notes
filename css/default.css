@@ -1,0 +1,15 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: Roboto;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Thin.ttf);
+}
+
+#txt {
+	font-family: Roboto;
+	font-size: 30px;
+}
