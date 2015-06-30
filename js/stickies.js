@@ -1,5 +1,7 @@
+
 var STICKIES = (function () {
     var initStickies = function initStickies() {
+       
         $("<div />", { 
             text : "+", 
             "class" : "add-sticky",
@@ -10,7 +12,9 @@ var STICKIES = (function () {
     openStickies = function openStickies() {
         initStickies && initStickies();
         for (var i = 0; i < localStorage.length; i++) {
-            createSticky(JSON.parse(localStorage.getItem(localStorage.key(i))));
+            try {
+                createSticky(JSON.parse(localStorage.getItem(localStorage.key(i))));
+            } catch (error) { }
         }
     },
     createSticky = function createSticky(data) {
@@ -19,30 +23,30 @@ var STICKIES = (function () {
         return $("<div />", { 
             "class" : "sticky",
             'id' : data.id
-             })
-            .prepend($("<div />", { "class" : "sticky-header"} )
-                .append($("<span />", { 
-                    "class" : "sticky-status", 
-                    click : saveSticky 
-                }))
-                .append($("<span />", { 
-                    "class" : "close-sticky", 
-                    text : "trash", 
-                    click : function () { deleteSticky($(this).parents(".sticky").attr("id")); }
-                }))
-            )
-            .append($("<div />", { 
-                html : data.text, 
-                contentEditable : true, 
-                "class" : "sticky-content", 
-                keypress : markUnsaved
+        })
+        .prepend($("<div />", { "class" : "sticky-header"} )
+            .append($("<span />", { 
+                "class" : "sticky-status", 
+                click : saveSticky 
             }))
+            .append($("<span />", { 
+                "class" : "close-sticky", 
+                text : "trash", 
+                click : function () { deleteSticky($(this).parents(".sticky").attr("id")); }
+            }))
+            )
+        .append($("<div />", { 
+            html : data.text, 
+            contentEditable : true, 
+            "class" : "sticky-content", 
+            keypress : markUnsaved
+        }))
         .draggable({ 
             handle : "div.sticky-header", 
             stack : ".sticky",
             start : markUnsaved,
             stop  : saveSticky  
-         })
+        })
         .css({
             position: "absolute",
             "top" : data.top,
@@ -57,22 +61,22 @@ var STICKIES = (function () {
     },
     saveSticky = function saveSticky() {
         var that = $(this),  sticky = (that.hasClass("sticky-status") || that.hasClass("sticky-content")) ? that.parents('div.sticky'): that,
-                obj = {
-                    id  : sticky.attr("id"),
-                    top : sticky.css("top"),
-                    left: sticky.css("left"),
-                    text: sticky.children(".sticky-content").html()             }
-        localStorage.setItem("sticky-" + obj.id, JSON.stringify(obj));  
-        sticky.find(".sticky-status").text("saved");
-    },
-    markUnsaved = function markUnsaved() {
-        var that = $(this), sticky = that.hasClass("sticky-content") ? that.parents("div.sticky") : that;
-        sticky.find(".sticky-status").text("unsaved");
-    }
-    return {
-        open   : openStickies,
-        init   : initStickies,
-        "new"  : createSticky,
-        remove : deleteSticky 
-    };
-}());
+        obj = {
+            id  : sticky.attr("id"),
+            top : sticky.css("top"),
+            left: sticky.css("left"),
+            text: sticky.children(".sticky-content").html()             }
+            localStorage.setItem("sticky-" + obj.id, JSON.stringify(obj));  
+            sticky.find(".sticky-status").text("saved");
+        },
+        markUnsaved = function markUnsaved() {
+            var that = $(this), sticky = that.hasClass("sticky-content") ? that.parents("div.sticky") : that;
+            sticky.find(".sticky-status").text("unsaved");
+        }
+        return {
+            open   : openStickies,
+            init   : initStickies,
+            "new"  : createSticky,
+            remove : deleteSticky 
+        };
+    }());
