@@ -1,0 +1,9 @@
+Package: io.github.maxleiter.cydget
+Name: Notes
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Notes cydget
+Homepage: maxleiter.github.io
+Maintainer: Max Leiter <maxwell_leiter@priorypanther.com>
+Author: Max Leiter <maxwell_leiter@priorypanther.com>
+Section: Cydget

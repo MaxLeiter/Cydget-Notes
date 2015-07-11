@@ -1,0 +1,16 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: Roboto;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/Roboto-Thin.ttf);
+}
+
+#txt {
+	margin-top: 30px;
+	font-size: 30px;
+}
+

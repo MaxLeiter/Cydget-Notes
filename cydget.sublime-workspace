@@ -1,0 +1,686 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"body",
+				"bodyMarkup"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"time",
+				"timeMultiplier"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"mrgi",
+				"margin-top"
+			],
+			[
+				"siz",
+				"font-size"
+			],
+			[
+				"logged",
+				"loggedInUser"
+			],
+			[
+				"fetch",
+				"fetchAllPermissions〔function〕"
+			],
+			[
+				"get",
+				"getShortMonthName  (function)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/Max/Desktop/Notes/DEBIAN/control",
+			"settings":
+			{
+				"buffer_size": 265,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset='utf-8' />\n  <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\" />\n  <link rel=\"stylesheet\" href=\"css/default.css\" />\n  <link rel=\"stylesheet\" href=\"css/stickies.css\" />\n      <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n      <![endif]-->\n    </head>\n    <body>\n      <center> <div id=\"txt\"></div> </center>\n      <script src=\"js/jquery.min.js\"></script>\n      <script src=\"js/jquery-ui.min.js\"></script>\n      <script src=\"js/jquery.ui.touch-punch.min.js\"></script>\n      <script>\n        function hidestatusbar() {\n          [[SBAppStatusBarManager sharedInstance] hideStatusBar]\n        }\n        </script>\n      <script>\n        /** put Yahoo Weather coe here, available at http://weather.yahoo.com **/\n        \n\n        function updateClock ( )\n        {\n\n          var currentTime = new Date ( );\n          var currentHours = currentTime.getHours ( );\n          var currentMinutes = currentTime.getMinutes ( );\n          var currentSeconds = currentTime.getSeconds ( );\n          \n          currentMinutes = ( currentMinutes < 10 ? \"0\" : \"\" ) + currentMinutes;\n          currentSeconds = ( currentSeconds < 10 ? \"0\" : \"\" ) + currentSeconds;\n          \n          var timeOfDay = ( currentHours < 12 ) ? \"AM\" : \"PM\";\n          \n          currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;\n          \n          currentHours = ( currentHours == 0 ) ? 12 : currentHours;\n          \n          var currentTimeString = currentHours + \":\" + currentMinutes + \":\" + currentSeconds + \" \" + timeOfDay;\n          \n          \n          $(\"#txt\").html(currentTimeString);\n          \n        }\n        \n        $(document).ready(function()\n        {\n         setInterval('updateClock()', 1000);\n         \n       });\n     </script>\n\n     <script src=\"js/json2.js\"></script>\n     <script src=\"js/stickies.js\"></script>\n     <script>\n      STICKIES.open();\n    </script>\n\n  </body>\n  </html>",
+			"file": "index.html",
+			"file_size": 2075,
+			"file_write_time": 130811224751523907,
+			"settings":
+			{
+				"buffer_size": 2012,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Notes.cydget/DEBIAN/control",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": ":focus {\n     outline:0;\n }\n .add-sticky {\n     cursor: default;\n     position:absolute;\n     margin-top: 30px;\n     top:1px;\n     left:1px;\n     font-size:200%;\n     color:#fff;\n     border:2px solid #fff;\n     border-radius:40px;\n     -webkit-border-radius:40px;\n     -moz-border-radius:40px;\n     text-align:center;\n     line-height:25px;\n     width:30px;\n     height:30px;\n }\n .add-sticky:hover {\n     background: #474747;\n }\n\n .sticky {\n     width:300px;\n     background:#666666;\n     box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     -webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     -moz-box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     border-radius: 3%;\n }\n .sticky-content {\n     min-height:150px;\n     border-left:3px double rgba(238, 150, 122, .75);\n     margin-left:30px;\n     padding:5px;\n }\n .sticky-header {\n     padding:5px;\n     background:#336699;\n     border-bottom:2px solid black;\n     box-shadow:0 3px 5px rgba(0,0,0,0.25);\n     -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);\n     -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);\n }\n\n .sticky-title {   \n }\n .sticky-status {\n     color:#ccc;\n     padding:5px;\n }\n .close-sticky {\n     background:#474747;\n     float:right;\n     cursor:default;\n     color:#ececec;\n     padding:1px 5px;\n     border-radius:20px;\n     -webkit-border-radius:20px;\n     -moz-border-radius:20px;\n }",
+			"file": "css/stickies.css",
+			"file_size": 1406,
+			"file_write_time": 130811216203334979,
+			"settings":
+			{
+				"buffer_size": 1344,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "body {\n	background-color: black;\n	color: white;\n	font-family: Roboto;\n}\n\n@font-face {\n    font-family: Roboto;\n    src: url(../assets/Roboto-Thin.ttf);\n}\n\n#txt {\n	margin-top: 30px;\n	font-size: 30px;\n}\n\n",
+			"file": "css/default.css",
+			"file_size": 218,
+			"file_write_time": 130811218006458112,
+			"settings":
+			{
+				"buffer_size": 202,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 510.0
+	},
+	"console":
+	{
+		"height": 459.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Max/Documents/Projects/Cydget",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/DEBIAN"
+	],
+	"file_history":
+	[
+		"/C/Users/Max/Documents/Projects/Cydget/js/iframe.js",
+		"/C/Users/Max/Documents/Projects/Cydget/js/stickies.js",
+		"/C/Users/Max/Documents/Projects/Cydget/css/iframe.css",
+		"/C/Users/Max/Documents/Projects/Cydget/index.html",
+		"/C/Users/Max/Desktop/repo/DEBIAN/Control",
+		"/C/Users/Max/Documents/Projects/Cydget/css/stickies.css",
+		"/C/Users/Max/Documents/Projects/toontownMobile/tt/css/styles.css",
+		"/C/Users/Max/Documents/Projects/toontownMobile/tt/index.html",
+		"/C/Users/Max/Documents/Projects/toontownMobile/tt/index.js",
+		"/M/Downloads/scrape/scrape/echo.js",
+		"/C/Users/Max/Documents/Projects/toontownMobile/views/home.jade",
+		"/C/Users/Max/Documents/Projects/toontownMobile/app.js",
+		"/C/Users/Max/Documents/Projects/toontownMobile/views/layout.jade",
+		"/C/Users/Max/Documents/Projects/toontownMobile/public/layout.jade",
+		"/C/Users/Max/Documents/Projects/toontownMobile/public/home.jade",
+		"/C/Users/Max/Documents/Projects/toontownMobile/views/home.html",
+		"/C/Users/Max/Documents/Projects/toontownMobile/package.json",
+		"/C/Users/Max/Documents/Projects/TTIwork/resources/README.md",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/index.html",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/app.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/service/loginMethods/FacebookLoginService.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/bower.json",
+		"/C/Users/Max/Downloads/Ionic-Material-master/Ionic-Material-master/Gulpfile.js",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/quality.html",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/index.html",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/about.html",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/products.html",
+		"/C/Users/Max/Downloads/Ionic-Material-master/Ionic-Material-master/demo/bower.json",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/package.json",
+		"/C/Users/Max/Downloads/Ionic-Material-master/Ionic-Material-master/demo/scss/ionic.app.scss",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/scss/style.scss",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/templates/tab-dash.html",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/controllers.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/tabSlideBox.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/factory/PersonFactory.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/factory/FeedFactory.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/css/all.css",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/templates/tab-claim-invite.html",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/scss/chat.scss",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/scss/directive/partyfinderMap.scss",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/scss/bootstrap-theme.css",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/scss/style.css",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/js/all.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/js/service/AuthService.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinderIonic/www/templates/tab-default.html",
+		"/M/Downloads/SteamAchievementManager63_hotfix/SAM.API.dll",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/css/tabSlideBox.css",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/js/app.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/css/chat.css",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/lib/ionic/README.md",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/gulpfile.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/package.json",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/lib/ionic/bower.json",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/lib/ionic/.bower.json",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/js/service/AuthService.js",
+		"/C/Users/Max/Documents/Projects/party/partyFinder/www/css/ionic.app.css",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/loading.css",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/scss/ionic.app.scss",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/tabSlideBox.css",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/style.css",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/lib/ionic/README.md",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/style.scss",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/tabSlideBox.scss",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/chat.scss",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/config.xml",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/config_.xml",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/css/chat.css",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/css/Bootstrap.css",
+		"/C/Users/Max/Documents/Projects/party/partyfinder-ionic/www/config.xml",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/css/bootstrap-responsive.css",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/css/style.css",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/css/links.html",
+		"/C/Users/Max/Documents/Projects/Leiters/Leiters/m.leiterrx.com/physicians.html",
+		"/M/Downloads/DanceGuns/DanceGuns/Assets/Scripts/PlayerPhysics.cs",
+		"/C/Users/Max/Downloads/CustomEasing/CustomEasing/CustomEasing/src/game.js",
+		"/C/Users/Max/Downloads/CustomEasing/CustomEasing/CustomEasing/src/states/boot.js",
+		"/M/Downloads/Plat/platformer-master/resources/splash/README.txt",
+		"/M/Downloads/DanceGuns/DanceGuns/Assets/Game.js",
+		"/M/Downloads/DanceGuns/DanceGuns/Assets/AudioRestart.js",
+		"/M/Downloads/DanceGuns/DanceGuns/Assets/AudioSpectrum.js",
+		"/C/Users/Max/Downloads/CustomEasing/CustomEasing/CustomEasing/src/app.js",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/ManagedFile.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/launcher/launcher.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/launcher/localizer.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/logging/__init__.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/wx/__init__.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/zipextimporter.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/warnings.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/TTRGame.bin",
+		"/C/Users/Max/Documents/Projects/Solar/SolarSystem3JS/index.html",
+		"/C/Program Files (x86)/Toontown Rewritten/library/email/mime/__init__.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/Patcher.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/unittest/suite.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/__init__.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/unittest/suite.pyc",
+		"/C/Program Files (x86)/Toontown Rewritten/library/fsm/FSM.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/fsm/FSM.pyc",
+		"/C/Program Files (x86)/Toontown Rewritten/library/launcher/messagetypes.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/launcher/settings.pyc",
+		"/C/Program Files (x86)/Toontown Rewritten/library/email/header.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/email/message.pyc_dis",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/ManagedFile.pyc",
+		"/C/Program Files (x86)/Toontown Rewritten/library/launcher/settings.pyc_dis",
+		"/C/Users/Max/Documents/Projects/Solar/SolarSystem3JS/index.js",
+		"/C/Users/Max/Desktop/hacktools/unpy2exe-master/unpy2exe.py",
+		"/C/Users/Max/Desktop/hacktools/Py2ExeDumper/Reversing Py2Exe.txt",
+		"/C/Users/Max/Desktop/hacktools/uncompyle2-master/uncompyle2-master/build/scripts-2.7/uncompyle2.py",
+		"/C/Python27/Scripts/calc-prorate-script.py",
+		"/C/Program Files (x86)/Toontown Rewritten/library/distutils/log.pyc_dis",
+		"/C/Users/Max/Desktop/hacktools/uncompyle2-master/uncompyle2-master/build/scripts-2.7/uncompyle2",
+		"/C/Program Files (x86)/Toontown Rewritten/TTRGame",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/__init__.pyc",
+		"/C/Program Files (x86)/Toontown Rewritten/library/patcher/Patcher.pyc",
+		"/M/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg",
+		"/C/Users/Max/Desktop/HailKingSaint650.txt",
+		"/M/Civ/Civilization V/Debug/Great People.ltp",
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Resources/Style.css",
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Widget.html",
+		"/C/Users/Max/Downloads/SCP-DS-Driver-Package-1.2.0.160/ScpServer/bin/Zadig/DualShock3.cfg",
+		"/M/Civ/Civilization V/Debug/Lua Mem Tracking.ltp",
+		"/C/Users/Max/Documents/Side_SBHTML/Style.css",
+		"/C/Users/Max/Documents/Side_SBHTML/Scripts/main.js",
+		"/C/Users/Max/Documents/Side_SBHTML/Wallpaper.html",
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Scripts/WeatherFunctions.js",
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Scripts/LocationFunctions.js",
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/readme.txt",
+		"/C/Users/Max/Documents/Side_SBHTML/Scripts/location.js",
+		"/C/Users/Max/Documents/Side_SBHTML/Battery/Battery.html"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Max\\Documents\\partyfinder-ionic\\www",
+			"C:\\Users\\Max\\Documents\\partyfinder-ionic\\www\\js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"stick",
+			"sticky",
+			"     ",
+			"Stickies",
+			"stickies",
+			"Sticky",
+			"sticky",
+			"hr",
+			"center",
+			"ul",
+			"w {l",
+			"w {",
+			"slash",
+			"ul",
+			"scope",
+			"model",
+			"userName",
+			"card",
+			"profile",
+			"item-bo",
+			"body",
+			"Person",
+			"index-2",
+			"ndex-2",
+			"btn:focus",
+			"btn-prima",
+			"hover",
+			"btn",
+			"btn btn-primary",
+			"btn",
+			"btn btn-primary",
+			"a {",
+			"a",
+			"face",
+			"orbit",
+			"zoo",
+			"zoob",
+			"boy",
+			"#paril101",
+			"paril101",
+			"ralex",
+			"x11",
+			"Transport",
+			"transpor",
+			"http",
+			"dwcm",
+			"dwcm''==",
+			"dwcm",
+			"connection",
+			"start",
+			"kickoff",
+			"fetchAllModsFor",
+			"loggedInUser",
+			"fetchAllMod",
+			"user_id",
+			"forUser",
+			"getAllMods",
+			"getallMods",
+			"userId",
+			"user_id",
+			"id",
+			"PERMISSION",
+			"MOD_REMOVE_USER",
+			"Admin Per",
+			"user_mod_",
+			"$mod_id",
+			"permission",
+			"UserCake",
+			" \n",
+			"display",
+			"tzine",
+			"innerText",
+			"Geos",
+			"Robo",
+			"Roboto",
+			"button",
+			"ajax",
+			"http",
+			"ghost",
+			"magic",
+			"spellbook",
+			"www",
+			"resource",
+			"git",
+			"infinitec",
+			"http",
+			"server",
+			"Lure",
+			"accuracy",
+			"checkProp",
+			"lure",
+			"btn",
+			"block",
+			"button",
+			"inputDesc",
+			"inputdesc",
+			"other",
+			"messages",
+			"message.",
+			"item-input-wrapper",
+			"ios",
+			"&quot;",
+			"a {",
+			"tsb-icon",
+			"h1",
+			"roomlabel",
+			"h6",
+			"h",
+			"event-menu",
+			"EventMenuCtrl",
+			"pubnub.ngMsgE",
+			"channel: $",
+			"ngPubli",
+			"pf.mainScope",
+			"mainScope",
+			"pf",
+			"tab",
+			"tabs",
+			"tab.",
+			"tab",
+			"header",
+			"Main",
+			"mainc",
+			"sideMenuController",
+			"span",
+			"group",
+			"name",
+			"friend"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"iFrame",
+			"iFrames",
+			"iFrame",
+			"iframe",
+			"start",
+			"MOD",
+			"mod",
+			"\"",
+			"$pf.mainScope",
+			"pf.mainScope",
+			"templates",
+			"pages"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Max/Desktop/Notes/DEBIAN/control",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Notes.cydget/DEBIAN/control",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/stickies.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 5,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/default.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 70.0
+	},
+	"input":
+	{
+		"height": 317.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 321.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cydget.sublime-project",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
