@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-color"
+			],
+			[
 				"block",
 				"inline-block"
 			],
@@ -48,51 +52,26 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/Max/Desktop/Notes/DEBIAN/control",
-			"settings":
-			{
-				"buffer_size": 265,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset='utf-8' />\n  <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\" />\n  <link rel=\"stylesheet\" href=\"css/default.css\" />\n  <link rel=\"stylesheet\" href=\"css/stickies.css\" />\n      <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n      <![endif]-->\n    </head>\n    <body>\n      <center> <div id=\"txt\"></div> </center>\n      <script src=\"js/jquery.min.js\"></script>\n      <script src=\"js/jquery-ui.min.js\"></script>\n      <script src=\"js/jquery.ui.touch-punch.min.js\"></script>\n      <script>\n        function hidestatusbar() {\n          [[SBAppStatusBarManager sharedInstance] hideStatusBar]\n        }\n        </script>\n      <script>\n        /** put Yahoo Weather coe here, available at http://weather.yahoo.com **/\n        \n\n        function updateClock ( )\n        {\n\n          var currentTime = new Date ( );\n          var currentHours = currentTime.getHours ( );\n          var currentMinutes = currentTime.getMinutes ( );\n          var currentSeconds = currentTime.getSeconds ( );\n          \n          currentMinutes = ( currentMinutes < 10 ? \"0\" : \"\" ) + currentMinutes;\n          currentSeconds = ( currentSeconds < 10 ? \"0\" : \"\" ) + currentSeconds;\n          \n          var timeOfDay = ( currentHours < 12 ) ? \"AM\" : \"PM\";\n          \n          currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;\n          \n          currentHours = ( currentHours == 0 ) ? 12 : currentHours;\n          \n          var currentTimeString = currentHours + \":\" + currentMinutes + \":\" + currentSeconds + \" \" + timeOfDay;\n          \n          \n          $(\"#txt\").html(currentTimeString);\n          \n        }\n        \n        $(document).ready(function()\n        {\n         setInterval('updateClock()', 1000);\n         \n       });\n     </script>\n\n     <script src=\"js/json2.js\"></script>\n     <script src=\"js/stickies.js\"></script>\n     <script>\n      STICKIES.open();\n    </script>\n\n  </body>\n  </html>",
-			"file": "index.html",
-			"file_size": 2075,
-			"file_write_time": 130811224751523907,
-			"settings":
-			{
-				"buffer_size": 2012,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Notes.cydget/DEBIAN/control",
 			"settings":
 			{
-				"buffer_size": 272,
+				"buffer_size": 261,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": ":focus {\n     outline:0;\n }\n .add-sticky {\n     cursor: default;\n     position:absolute;\n     margin-top: 30px;\n     top:1px;\n     left:1px;\n     font-size:200%;\n     color:#fff;\n     border:2px solid #fff;\n     border-radius:40px;\n     -webkit-border-radius:40px;\n     -moz-border-radius:40px;\n     text-align:center;\n     line-height:25px;\n     width:30px;\n     height:30px;\n }\n .add-sticky:hover {\n     background: #474747;\n }\n\n .sticky {\n     width:300px;\n     background:#666666;\n     box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     -webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     -moz-box-shadow:3px 3px 10px rgba(0,0,0,0.45);\n     border-radius: 3%;\n }\n .sticky-content {\n     min-height:150px;\n     border-left:3px double rgba(238, 150, 122, .75);\n     margin-left:30px;\n     padding:5px;\n }\n .sticky-header {\n     padding:5px;\n     background:#336699;\n     border-bottom:2px solid black;\n     box-shadow:0 3px 5px rgba(0,0,0,0.25);\n     -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);\n     -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);\n }\n\n .sticky-title {   \n }\n .sticky-status {\n     color:#ccc;\n     padding:5px;\n }\n .close-sticky {\n     background:#474747;\n     float:right;\n     cursor:default;\n     color:#ececec;\n     padding:1px 5px;\n     border-radius:20px;\n     -webkit-border-radius:20px;\n     -moz-border-radius:20px;\n }",
-			"file": "css/stickies.css",
-			"file_size": 1406,
-			"file_write_time": 130811216203334979,
+			"file": "Notes.cydget/User/Library/GroovyLock/Notes.cydget/css/default.css",
 			"settings":
 			{
-				"buffer_size": 1344,
+				"buffer_size": 176,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "body {\n	background-color: black;\n	color: white;\n	font-family: Roboto;\n}\n\n@font-face {\n    font-family: Roboto;\n    src: url(../assets/Roboto-Thin.ttf);\n}\n\n#txt {\n	margin-top: 30px;\n	font-size: 30px;\n}\n\n",
-			"file": "css/default.css",
-			"file_size": 218,
-			"file_write_time": 130811218006458112,
+			"file": "Notes.cydget/User/Library/GroovyLock/Notes.cydget/css/stickies.css",
 			"settings":
 			{
-				"buffer_size": 202,
+				"buffer_size": 1773,
 				"line_ending": "Windows"
 			}
 		}
@@ -137,16 +116,32 @@
 	[
 		"/C/Users/Max/Documents/Projects/Cydget",
 		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget",
-		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/DEBIAN"
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/DEBIAN",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/User",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/User/Library",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/User/Library/GroovyLock",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/User/Library/GroovyLock/Notes.cydget",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/User/Library/GroovyLock/Notes.cydget/css"
 	],
 	"file_history":
 	[
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/System/Library/LockCydgets/Notes.cydget/css/stickies-basic.css",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/System/Library/LockCydgets/Notes.cydget/css/stickies.css",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/System/Library/LockCydgets/Notes.cydget/LockBackground.html",
+		"/C/Users/Max/Documents/Projects/Cydget/css/default.css",
+		"/C/Users/Max/Documents/Projects/Cydget/css/stickies.css",
+		"/C/Users/Max/Desktop/Notes/System/Library/LockCydgets/css/default.css",
+		"/C/Users/Max/Desktop/Notes/System/Library/LockCydgets/LockBackground.html",
+		"/C/Users/Max/Desktop/Notes/DEBIAN/control",
+		"/C/Users/Max/Documents/Projects/Cydget/index.html",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/DEBIAN/control",
+		"/C/Users/Max/Documents/Projects/Cydget/Notes.cydget/System/Library/LockCydgets/Notes.cydget/css/default.css",
+		"/C/Users/Max/AppData/Local/Temp/fz3temp-1/default.css",
+		"/C/Users/Max/AppData/Local/Temp/scp23761/private/var/db/stash/_.d9djtE/LockCydgets/Notes.cydget/Info.plist",
 		"/C/Users/Max/Documents/Projects/Cydget/js/iframe.js",
 		"/C/Users/Max/Documents/Projects/Cydget/js/stickies.js",
 		"/C/Users/Max/Documents/Projects/Cydget/css/iframe.css",
-		"/C/Users/Max/Documents/Projects/Cydget/index.html",
 		"/C/Users/Max/Desktop/repo/DEBIAN/Control",
-		"/C/Users/Max/Documents/Projects/Cydget/css/stickies.css",
 		"/C/Users/Max/Documents/Projects/toontownMobile/tt/css/styles.css",
 		"/C/Users/Max/Documents/Projects/toontownMobile/tt/index.html",
 		"/C/Users/Max/Documents/Projects/toontownMobile/tt/index.js",
@@ -257,18 +252,7 @@
 		"/M/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg",
 		"/C/Users/Max/Desktop/HailKingSaint650.txt",
 		"/M/Civ/Civilization V/Debug/Great People.ltp",
-		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Resources/Style.css",
-		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Widget.html",
-		"/C/Users/Max/Downloads/SCP-DS-Driver-Package-1.2.0.160/ScpServer/bin/Zadig/DualShock3.cfg",
-		"/M/Civ/Civilization V/Debug/Lua Mem Tracking.ltp",
-		"/C/Users/Max/Documents/Side_SBHTML/Style.css",
-		"/C/Users/Max/Documents/Side_SBHTML/Scripts/main.js",
-		"/C/Users/Max/Documents/Side_SBHTML/Wallpaper.html",
-		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Scripts/WeatherFunctions.js",
-		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Scripts/LocationFunctions.js",
-		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/readme.txt",
-		"/C/Users/Max/Documents/Side_SBHTML/Scripts/location.js",
-		"/C/Users/Max/Documents/Side_SBHTML/Battery/Battery.html"
+		"/C/Users/Max/Documents/Side_SBHTML/SB Squares iWidget/Resources/Style.css"
 	],
 	"find":
 	{
@@ -451,19 +435,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/Max/Desktop/Notes/DEBIAN/control",
+					"file": "Notes.cydget/DEBIAN/control",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 265,
+						"buffer_size": 261,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								265,
-								265
+								260,
+								260
 							]
 						],
 						"settings":
@@ -474,35 +458,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "index.html",
+					"file": "Notes.cydget/User/Library/GroovyLock/Notes.cydget/css/default.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2012,
+						"buffer_size": 176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								722,
-								722
+								21,
+								21
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -510,47 +491,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Notes.cydget/DEBIAN/control",
-					"semi_transient": false,
+					"file": "Notes.cydget/User/Library/GroovyLock/Notes.cydget/css/stickies.css",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 272,
+						"buffer_size": 1773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/stickies.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								111,
-								94
+								672,
+								672
 							]
 						],
 						"settings":
@@ -563,35 +516,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "css/default.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 202,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								202,
-								202
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -678,7 +603,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 226.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
