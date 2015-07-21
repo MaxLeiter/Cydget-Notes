@@ -1,11 +1,22 @@
 body {
 	color: white;
 	font-family: Roboto;
+	background-color: black;
 }
 
 @font-face {
     font-family: Roboto;
     src: url(../assets/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../assets/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../assets/Roboto-Medium.ttf);
 }
 
 #txt {

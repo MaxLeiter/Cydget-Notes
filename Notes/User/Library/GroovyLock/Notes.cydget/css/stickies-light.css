@@ -30,45 +30,75 @@
 /** The portion of the sticky that you write in; I don't recommend changing shadows **/
  .sticky {
      width:300px;
-     background:#666666;
      box-shadow:3px 3px 10px rgba(0,0,0,0.45);
      -webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
      -moz-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
-     border-radius: 3%;
+     border-radius: 6%;
  }
+
  .sticky-content {
      min-height:150px;
-     border-left:3px double rgba(238, 150, 122, .75);
-     margin-left:30px;
      padding:5px;
+     background-color: white;
+     color: black;
+     font-size: 17px;
+     font-weight: bold;
  }
 
  /** The header, (where trash and saved/unsaved is located); change background **/
  .sticky-header {
      padding:5px;
-     background:#336699;
-     border-bottom:2px solid black;
+     background:#F2F2F2;
+     border-bottom:1px solid #DFDFDF;
      box-shadow:0 3px 5px rgba(0,0,0,0.25);
      -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);
      -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);
+     border-radius: 8px 8px 0 0;
  }
 
- .sticky-title {   
+ .sticky-footer {
+     padding:5px;
+     background:#F2F2F2;
+     color: gray;
+     border-top:1px solid #DFDFDF;
+     box-shadow:0 3px 5px rgba(0,0,0,0.25);
+     -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);
+     -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);
+     border-radius: 0 0 8px 8px;
  }
+
+.sticky-date {
+     font-weight: bold;
+}
+
+.sticky-old {
+     padding: 5px;
+}
+ .sticky-title {
+     font-family: Roboto-Medium;
+     color: black;
+     padding:5px;
+     position: absolute;
+     padding-top: 25px;
+     left: 50%;
+     margin-right: -50%;
+     transform: translate(-50%, -50%)
+ }
+ 
 /** The saved/unsaved text **/
  .sticky-status {
-     color:#ccc;
-     padding:5px;
+     float: right;
+     font-weight: bold;
  }
 
 /** Trash **/
  .close-sticky {
-     background:#474747;
-     float:right;
+     float:left;
      cursor:default;
-     color:#ececec;
+     color:#167FFC;
      padding:1px 5px;
      border-radius:20px;
      -webkit-border-radius:20px;
      -moz-border-radius:20px;
+     font-weight: bold;
  }
