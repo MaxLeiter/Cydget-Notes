@@ -9,6 +9,7 @@ var STICKIES = (function () {
             "class" : "add-sticky",
             click : function () { interval++; createSticky(); }
         }).prependTo(document.body);
+
         initStickies = null;
     },
     openStickies = function openStickies() {
@@ -121,3 +122,4 @@ saveSticky = function saveSticky() {
         save : saveSticky
     };
 }());
+
