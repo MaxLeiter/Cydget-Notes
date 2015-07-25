@@ -13,6 +13,7 @@
     <body>
       <br>
       <div id='testing'> <div id="txt"></div>  <input type="checkbox" id="toggle" /> </div>
+      <p> Get the tweak on <a href='http://modmyi.com/info/notesgroovylock.d.php'> modmyi! </a> </p>
       <link rel='stylesheet' class='toggleCSS' href='css/stickies-light.css' type='text/css'>
       
       <script>
@@ -28,7 +29,6 @@
       function save() {
         var checkbox = document.getElementById('toggle');
         localStorage.setItem('checkbox', checkbox.checked);
-        console.log('save fired');
       }
 
      
@@ -38,10 +38,8 @@
         if ($('#toggle').is(":checked"))
         {
           $(".toggleCSS").attr("href", "css/stickies-dark.css");
-          console.log('checked!');
         } else {
           $(".toggleCSS").attr("href", "css/stickies-light.css")
-           console.log('not checked!');
         }
 
       });
