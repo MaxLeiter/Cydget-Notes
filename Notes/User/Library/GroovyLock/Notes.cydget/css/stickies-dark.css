@@ -1,48 +1,23 @@
-:focus {
-     outline:0;
- }
- /** The plus button at the top right.  
-     change the hex (#fff) in border: to change the circle color, and change 'color' to change the plus icon;
- **/
-  .add-sticky {
-     cursor: default;
-     position: absolute;
-     font-size:200%;
-     color:#fff;
-     border:2px solid #fff;
-     border-radius:40px;
-     -webkit-border-radius:40px;
-     -moz-border-radius:40px;
-     text-align:center;
-     line-height:25px;
-     width:30px;
-     height:30px;
- }
-/** the color that fills the circle when hovered **/
- .add-sticky:hover {
-     background: #474747;
- }
-
 /** The portion of the sticky that you write in; I don't recommend changing shadows **/
- .sticky {
+.sticky {
      width:300px;
      box-shadow:3px 3px 10px rgba(0,0,0,0.45);
      -webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
      -moz-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
      border-radius: 6%;
- }
+}
 
- .sticky-content {
+.sticky-content {
      min-height:150px;
      padding:5px;
      background-color: #1A1A1A;
      color: #E6E6E6;
      font-size: 17px;
      font-weight: bold;
- }
+}
 
- /** The header, (where trash and saved/unsaved is located); change background **/
- .sticky-header {
+/** The header, (where trash and saved/unsaved is located); change background **/
+.sticky-header {
      padding:5px;
      background:#242424;
      border-bottom:1px solid #3C3C3C;
@@ -50,9 +25,9 @@
      -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);
      -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);
      border-radius: 8px 8px 0 0;
- }
+}
 
- .sticky-footer {
+.sticky-footer {
      padding:5px;
      background:#242424;
      color: gray;
@@ -61,16 +36,9 @@
      -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.25);
      -moz-box-shadow:0 3px 5px rgba(0,0,0,0.25);
      border-radius: 0 0 8px 8px;
- }
-
-.sticky-date {
-     font-weight: bold;
 }
 
-.sticky-old {
-     padding: 5px;
-}
- .sticky-title {
+.sticky-title {
      font-family: Roboto-Medium;
      color: white;
      padding:5px;
@@ -79,16 +47,10 @@
      left: 50%;
      margin-right: -50%;
      transform: translate(-50%, -50%)
- }
- 
-/** The saved/unsaved text **/
- .sticky-status {
-     float: right;
-     font-weight: bold;
- }
+}
 
 /** Trash **/
- .close-sticky {
+.close-sticky {
      float:left;
      cursor:default;
      color:#858E9C;
@@ -97,4 +59,4 @@
      -webkit-border-radius:20px;
      -moz-border-radius:20px;
      font-weight: bold;
- }
+}

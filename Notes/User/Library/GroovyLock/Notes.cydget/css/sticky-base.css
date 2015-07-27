@@ -1,0 +1,49 @@
+:focus {
+     outline:0;
+ }
+ /** The plus button at the top right.  
+     change the hex (#fff) in border: to change the circle color, and change 'color' to change the plus icon;
+ **/
+  .add-sticky {
+     cursor: default;
+     position: absolute;
+     font-size:200%;
+     color:#fff;
+     border:2px solid #fff;
+     border-radius:40px;
+     -webkit-border-radius:40px;
+     -moz-border-radius:40px;
+     text-align:center;
+     line-height:25px;
+     width:30px;
+     height:30px;
+ }
+
+/** the color that fills the circle when hovered **/
+ .add-sticky:hover {
+     background: #474747;
+ }
+
+ /** The portion of the sticky that you write in; I don't recommend changing shadows **/
+ .sticky {
+     width:300px;
+     box-shadow:3px 3px 10px rgba(0,0,0,0.45);
+     -webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
+     -moz-box-shadow:3px 3px 10px rgba(0,0,0,0.45);
+     border-radius: 6%;
+ }
+
+ .sticky-date {
+     font-weight: bold;
+}
+
+
+.sticky-old {
+     padding: 5px;
+}
+
+/** The saved/unsaved text **/
+    .sticky-status {
+     float: right;
+     font-weight: bold;
+ }
