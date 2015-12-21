@@ -4,7 +4,7 @@
  /** The plus button at the top right.  
      change the hex (#fff) in border: to change the circle color, and change 'color' to change the plus icon;
  **/
-  .add-sticky {
+.add-sticky {
      cursor: default;
      position: absolute;
      font-size:200%;

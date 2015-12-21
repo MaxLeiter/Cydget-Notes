@@ -19,10 +19,10 @@ body {
     src: url(../assets/Roboto-Medium.ttf);
 }
 
-#txt {
+#time {
 	position: absolute;
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 	font-size: 30px;
 }
 
